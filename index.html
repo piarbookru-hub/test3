@@ -1,1079 +1,1226 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta name="cms-deploy-id" content="dmweyn0a92dzv2h">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Портфолио сайтов для малого бизнеса: автосервисы, салоны красоты, клиники, юристы, фотографы и другие.">
-        <title>Портфолио | piarbook.ru
-    </title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0908;
-            color: #f5efe6;
-            line-height: 1.6;
-            position: relative;
-        }
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<meta http-equiv="Content-Language" content="ru">
+<meta name="description" content="ПТИЦ НЕТ 35 — профессиональная защита объектов от птиц в Вологде и Вологодской области. Гуманное отпугивание, разгон стай, защита зданий. Работаем по договору.">
+<meta name="keywords" content="защита от птиц Вологда, отпугивание птиц, биоакустика, лазерный разгон птиц, противоприсадные шипы, орнитологический контроль">
+<title>ПТИЦ НЕТ 35 — защита объектов от птиц в Вологде</title>
 
-        .bg-fixed {
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            background: linear-gradient(135deg, #0a0908 0%, #1a1614 50%, #2a1f18 100%);
-        }
-        .bg-fixed::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('images/studio-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.12;
-            filter: blur(2px) saturate(0.7);
-        }
-        .bg-fixed::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse at 20% 30%, rgba(201, 169, 97, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 70%, rgba(180, 80, 50, 0.1) 0%, transparent 50%),
-                linear-gradient(180deg, rgba(10, 9, 8, 0.3) 0%, rgba(10, 9, 8, 0.85) 100%);
-        }
+<!-- Место для Яндекс.Метрики (вставить код счётчика сюда) -->
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem 2rem 3rem;
-            position: relative;
-            z-index: 1;
-        }
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+<meta name="theme-color" content="#0F172A">
 
-        /* ===== ЗАГОЛОВОК ПОРТФОЛИО ===== */
-        .portfolio-hero {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            padding: 1rem 0 0.5rem;
-        }
-        .portfolio-hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.3rem, 5vw, 2.8rem);
-            font-weight: 500;
-            line-height: 1;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: #c9a961;
-            margin-bottom: 0.6rem;
-            position: relative;
-            display: inline-block;
-        }
-        .portfolio-hero h1::before,
-        .portfolio-hero h1::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: clamp(20px, 5vw, 50px);
-            height: 1px;
-        }
-        .portfolio-hero h1::before {
-            right: 100%;
-            margin-right: 1rem;
-            background: linear-gradient(90deg, transparent, #c9a961);
-        }
-        .portfolio-hero h1::after {
-            left: 100%;
-            margin-left: 1rem;
-            background: linear-gradient(90deg, #c9a961, transparent);
-        }
-        .hero-divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-            margin-top: 0.8rem;
-        }
-        .hero-divider-line {
-            width: clamp(40px, 10vw, 100px);
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.5), transparent);
-        }
-        .hero-divider-diamond {
-            width: 6px;
-            height: 6px;
-            background: #c9a961;
-            transform: rotate(45deg);
-            box-shadow: 0 0 10px rgba(201, 169, 97, 0.4);
-        }
+<style>
+/* ===== БАЗА ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #0F172A;
+  background: #F8FAFC;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        .divider {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin: 2.5rem 0;
-            padding: 0 1rem;
-        }
-        .divider-line {
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.4) 20%, rgba(201, 169, 97, 0.4) 80%, transparent);
-        }
-        .divider-icon {
-            width: 44px;
-            height: 44px;
-            background: rgba(201, 169, 97, 0.1);
-            border: 1px solid rgba(201, 169, 97, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #c9a961;
-            flex-shrink: 0;
-        }
-        .divider-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.5;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
+/* ===== ЦВЕТА ===== */
+:root {
+  --dark: #0F172A;
+  --graphite: #1E293B;
+  --accent: #F59E0B;
+  --accent-hover: #D97706;
+  --light: #FFFFFF;
+  --bg: #F8FAFC;
+  --muted: #64748B;
+}
 
-        .portfolio-section {
-            margin-bottom: 1.5rem;
-        }
+/* ===== ФОН ФОН ===== */
+.bg-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: #F8FAFC;
+}
+.bg-fixed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, rgba(245,158,11,0.05), transparent 70%);
+}
 
-        /* ===== СЕТКА 3x3 ГОРИЗОНТАЛЬНАЯ ===== */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            max-width: 66.67%;
-            margin: 0 auto;
-        }
+/* ===== ШАПКА ===== */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(15,23,42,0.97);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(245,158,11,0.2);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.logo-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+.logo-name span { color: var(--accent); }
+.logo-sub {
+  font-size: 11px;
+  color: #94A3B8;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+.nav {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+.nav a {
+  color: #E2E8F0;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav a:hover { color: var(--accent); }
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.city {
+  color: #CBD5E1;
+  font-size: 13px;
+  text-align: right;
+  line-height: 1.3;
+}
+.city small { color: #94A3B8; display: block; font-size: 11px; }
+.phone-top {
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.phone-top:hover { color: var(--accent); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.btn-dark {
+  background: var(--dark);
+  color: #fff;
+}
+.btn-dark:hover { background: var(--graphite); color: var(--accent); }
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 8px;
+}
+.burger span {
+  width: 26px; height: 2px;
+  background: #fff;
+  transition: all 0.3s;
+}
 
-        .portfolio-card {
-            position: relative;
-            aspect-ratio: 16/10;
-            border-radius: 4px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.4s, border-color 0.4s;
-            background: #1a1614;
-            display: flex;
-            align-items: flex-end;
-            text-decoration: none;
-            color: inherit;
-            border: 1px solid rgba(201, 169, 97, 0.15);
-        }
-        .portfolio-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(201, 169, 97, 0.4);
-        }
-        .portfolio-card:focus-visible,
-        .tag:focus-visible {
-            outline: 2px solid #c9a961;
-            outline-offset: 3px;
-        }
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  padding: 180px 0 100px;
+  color: #fff;
+  overflow: hidden;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15,23,42,0.85), rgba(30,41,59,0.75));
+  z-index: 1;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  opacity: 0.55;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+.badge {
+  display: inline-block;
+  background: rgba(245,158,11,0.15);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  border: 1px solid rgba(245,158,11,0.3);
+}
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  text-wrap: balance;
+}
+.hero h1 span { color: var(--accent); }
+.hero-sub {
+  font-size: 20px;
+  color: #E2E8F0;
+  margin-bottom: 36px;
+  max-width: 760px;
+  text-wrap: balance;
+}
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.btn-lg { padding: 16px 30px; font-size: 16px; }
+.triggers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.trigger {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.trigger-icon {
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  background: rgba(245,158,11,0.15);
+  border: 1px solid rgba(245,158,11,0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 20px;
+}
+.trigger-text {
+  font-size: 14px;
+  color: #CBD5E1;
+  line-height: 1.5;
+}
 
-        .portfolio-card-bg {
-            position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center top;
-            transition: transform 0.6s, opacity 0.6s;
-            opacity: 0.75;
-            pointer-events: none;
-        }
+/* ===== ЗАГЛУШКИ ФОТО ===== */
+.placeholder {
+  position: relative;
+  background: #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94A3B8;
+  font-size: 13px;
+  min-height: 300px;
+}
+.placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.placeholder-label {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,23,42,0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+  gap: 6px;
+  transition: opacity 0.3s;
+}
+.placeholder-label.hidden { opacity: 0; pointer-events: none; }
+.placeholder-label strong {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--dark);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+.placeholder-label strong:hover { background: var(--accent-hover); color: #fff; }
+.placeholder-label small { color: #94A3B8; font-size: 12px; max-width: 200px; }
 
-        /* ===== ФОТО: вписывается целиком, бока не обрезаются ===== */
-        .portfolio-card img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center top;
-            z-index: 1;
-            transition: transform 0.6s;
-            opacity: 1;
-            background: #1a1614;
-        }
-        .portfolio-card:hover img,
-        .portfolio-card:hover .portfolio-card-bg {
-            transform: scale(1.03);
-        }
+/* ===== СЕКЦИИ ===== */
+section { padding: 90px 0; }
+.section-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-head .badge { background: rgba(15,23,42,0.08); color: var(--dark); border-color: transparent; }
+.section-head h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-top: 16px;
+  text-wrap: balance;
+}
+.section-head p {
+  color: var(--muted);
+  font-size: 18px;
+  margin-top: 16px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-        /* ===== ЗАТЕМНЕНИЕ ===== */
-        .portfolio-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                180deg, 
-                transparent 0%, 
-                transparent 15%,
-                rgba(10, 9, 8, 0.35) 32%,
-                rgba(10, 9, 8, 0.80) 48%,
-                rgba(10, 9, 8, 0.97) 62%,
-                #0a0908 80%
-            );
-            z-index: 2;
-            pointer-events: none;
-        }
-        .portfolio-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse at center top, transparent 25%, rgba(10, 9, 8, 0.28) 100%),
-                linear-gradient(180deg, rgba(10, 9, 8, 0.12) 0%, transparent 20%);
-            z-index: 2;
-            pointer-events: none;
-        }
+/* ===== ПРОБЛЕМЫ ===== */
+.problems { background: #fff; }
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.problem {
+  background: #F8FAFC;
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid #E2E8F0;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.problem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(15,23,42,0.08);
+  border-color: var(--accent);
+}
+.problem::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: var(--accent);
+}
+.problem-num {
+  font-size: 44px;
+  font-weight: 800;
+  color: rgba(15,23,42,0.08);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.problem h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+.problem p {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+}
 
-        /* ===== ТЕКСТ КАРТОЧКИ ===== */
-        .card-content {
-            position: relative;
-            z-index: 3;
-            padding: 1rem 1.2rem;
-            width: 100%;
-            pointer-events: auto;
-        }
+/* ===== ПРАЙС ===== */
+.price { background: var(--bg); }
+.price-table {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15,23,42,0.06);
+  border: 1px solid #E2E8F0;
+}
+.price-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  gap: 20px;
+  padding: 24px 30px;
+  align-items: center;
+  border-bottom: 1px solid #E2E8F0;
+  transition: background 0.2s;
+}
+.price-row:last-child { border-bottom: none; }
+.price-row.header {
+  background: var(--dark);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.price-row:not(.header):hover { background: #F8FAFC; }
+.price-name { font-weight: 600; color: var(--dark); }
+.price-cost {
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 17px;
+}
+.price-desc { color: #475569; font-size: 14px; line-height: 1.5; }
+.price-note {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: #FEF3C7;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  color: #78350F;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.price-note strong { color: var(--dark); }
 
-        .card-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 0.72rem;
-            color: #c9a961;
-            letter-spacing: 0.2em;
-            margin-bottom: 0.4rem;
-            font-style: italic;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-        }
+/* ===== ШАГИ ===== */
+.steps { background: #fff; }
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.step {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--bg);
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  position: relative;
+  transition: all 0.3s;
+}
+.step:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(245,158,11,0.1);
+}
+.step-num {
+  width: 56px; height: 56px;
+  background: var(--dark);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 auto 20px;
+  border: 3px solid var(--accent);
+}
+.step h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+.step p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
 
-        .card-tag {
-            font-size: 0.62rem;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: #d4b876;
-            margin-bottom: 0.3rem;
-            font-weight: 500;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-        }
+/* ===== B2B ===== */
+.b2b {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--graphite) 100%);
+  color: #fff;
+}
+.b2b .section-head h2 { color: #fff; }
+.b2b .section-head p { color: #CBD5E1; }
+.b2b-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.b2b-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s;
+}
+.b2b-card:hover {
+  background: rgba(245,158,11,0.1);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.b2b-icon {
+  width: 56px; height: 56px;
+  background: var(--accent);
+  color: var(--dark);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.b2b-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.b2b-card p { color: #CBD5E1; font-size: 15px; line-height: 1.6; }
 
-        .card-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            color: #ffffff;
-            line-height: 1.1;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
-        }
+/* ===== КОНТАКТЫ / ФОРМА ===== */
+.contact {
+  background: #fff;
+  padding: 80px 0;
+}
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+.form-block {
+  background: var(--bg);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+}
+.form-block h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+.form-block .subtitle {
+  color: var(--muted);
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--graphite);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #fff;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.form-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.form-policy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 14px;
+}
+.contact-info h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--dark);
+}
+.contact-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid #E2E8F0;
+}
+.contact-item:last-child { border-bottom: none; }
+.contact-icon {
+  width: 44px; height: 44px;
+  background: rgba(245,158,11,0.1);
+  color: var(--accent);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.contact-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+.contact-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+}
+.contact-value a { transition: color 0.2s; }
+.contact-value a:hover { color: var(--accent); }
 
-        .card-desc {
-            font-size: 0.72rem;
-            color: #d4cec2;
-            line-height: 1.4;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
+/* ===== ФУТЕР ===== */
+.footer {
+  background: var(--dark);
+  color: #94A3B8;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.footer a { color: var(--accent); }
 
-        .card-meta {
-            display: flex;
-            gap: 0.6rem;
-            font-size: 0.62rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #b8b0a4;
-            padding-top: 0.5rem;
-            border-top: 1px solid rgba(201, 169, 97, 0.35);
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-        }
+/* ===== МОДАЛКА ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,0.75);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal.active { display: flex; }
+.modal-box {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  padding: 40px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  background: #F1F5F9;
+  border-radius: 50%;
+  font-size: 22px;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.modal-close:hover { background: var(--accent); color: #fff; }
+.modal-box h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+.modal-box .subtitle {
+  color: var(--muted);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
 
-        .placeholder-label {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 3;
-            text-align: center;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid rgba(201, 169, 97, 0.3);
-            border-radius: 4px;
-            max-width: 85%;
-            pointer-events: none;
-        }
-        .placeholder-label strong {
-            display: block;
-            font-family: 'Courier New', monospace;
-            font-size: 0.72rem;
-            color: #c9a961;
-            margin-bottom: 0.4rem;
-            word-break: break-all;
-        }
-        .placeholder-label span {
-            display: block;
-            font-size: 0.68rem;
-            color: #b8b0a4;
-            line-height: 1.4;
-        }
+/* ===== ПЛАВАЮЩАЯ КНОПКА ===== */
+.float-cta {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 24px;
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(245,158,11,0.4);
+  z-index: 50;
+  padding-bottom: calc(14px + env(safe-area-inset-bottom));
+}
 
-        .info-section {
-            margin-top: 1.5rem;
-        }
+/* ===== УВЕДОМЛЕНИЕ ===== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--dark);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 300;
+  transition: transform 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .info-card {
-            background: rgba(26, 22, 20, 0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 1.8rem;
-            border-radius: 4px;
-            border: 1px solid rgba(201, 169, 97, 0.15);
-            transition: all 0.3s;
-        }
-        .info-card:hover {
-            border-color: rgba(201, 169, 97, 0.35);
-            transform: translateY(-4px);
-        }
-
-        .info-card-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: #c9a961;
-            margin-bottom: 1.2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 1px solid rgba(201, 169, 97, 0.2);
-            letter-spacing: 0.03em;
-        }
-
-        .checklist {
-            list-style: none;
-        }
-        .checklist li {
-            padding: 0.45rem 0;
-            color: #f5efe6;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.7rem;
-            line-height: 1.5;
-        }
-        .checklist li::before {
-            content: '—';
-            color: #c9a961;
-            font-weight: 500;
-            flex-shrink: 0;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-        .tag {
-            background: rgba(201, 169, 97, 0.08);
-            border: 1px solid rgba(201, 169, 97, 0.25);
-            color: #f5efe6;
-            padding: 0.4rem 0.85rem;
-            border-radius: 2px;
-            font-size: 0.82rem;
-            font-weight: 400;
-            transition: all 0.3s;
-        }
-        .tag:hover {
-            background: rgba(201, 169, 97, 0.2);
-            border-color: #c9a961;
-            color: #c9a961;
-            transform: translateY(-2px);
-        }
-
-        .guarantee-item {
-            display: flex;
-            gap: 0.7rem;
-            padding: 0.55rem 0;
-            color: #f5efe6;
-            font-size: 0.9rem;
-            align-items: flex-start;
-            line-height: 1.5;
-            border-bottom: 1px solid rgba(201, 169, 97, 0.08);
-        }
-        .guarantee-item:last-child {
-            border-bottom: none;
-        }
-        .guarantee-item::before {
-            content: '✦';
-            color: #c9a961;
-            font-size: 0.85rem;
-            flex-shrink: 0;
-            margin-top: 0.2rem;
-        }
-
-        /* ===== АДАПТИВ ===== */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 1.5rem 1.5rem 2.5rem;
-            }
-            .portfolio-hero {
-                margin-bottom: 2rem;
-            }
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.9rem;
-                max-width: 100%;
-            }
-            /* девятая карточка не остаётся одна сбоку */
-            .portfolio-card:last-child:nth-child(odd) {
-                grid-column: 1 / -1;
-                justify-self: center;
-                width: calc(50% - 0.45rem);
-            }
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 1.2rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 1.2rem 1rem 2rem;
-            }
-            .portfolio-hero {
-                margin-bottom: 1.5rem;
-                padding: 0.5rem 0;
-            }
-            .portfolio-hero h1 {
-                letter-spacing: 0.15em;
-            }
-            .portfolio-hero h1::before,
-            .portfolio-hero h1::after {
-                display: none;
-            }
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-                gap: 0.8rem;
-                max-width: 100%;
-            }
-            .portfolio-card:last-child:nth-child(odd) {
-                width: 100%;
-            }
-            .portfolio-card {
-                aspect-ratio: 16/9;
-            }
-            .card-content {
-                padding: 1rem;
-            }
-            .card-title {
-                font-size: 1.2rem;
-            }
-            .info-card {
-                padding: 1.4rem;
-            }
-            .info-card-title {
-                font-size: 1.25rem;
-            }
-            .divider {
-                margin: 2rem 0;
-            }
-            .divider-icon {
-                width: 36px;
-                height: 36px;
-            }
-        }
-
-        @media (max-width: 380px) {
-            .container {
-                padding: 1rem 0.8rem 1.8rem;
-            }
-            .info-card {
-                padding: 1.2rem;
-            }
-        }
-    </style>
-
+/* ===== АДАПТИВ ===== */
+@media (max-width: 960px) {
+  .nav, .city, .phone-top { display: none; }
+  .burger { display: flex; }
+  .nav.mobile-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--dark);
+    flex-direction: column;
+    padding: 20px;
+    gap: 18px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero { padding: 140px 0 70px; min-height: 70vh; }
+  .hero h1 { font-size: 38px; }
+  .hero-sub { font-size: 17px; }
+  .triggers { grid-template-columns: 1fr; gap: 16px; }
+  .section-head h2 { font-size: 30px; }
+  section { padding: 60px 0; }
+  .problems-grid, .b2b-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-wrap { grid-template-columns: 1fr; gap: 30px; }
+  .price-row { grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
+  .price-row.header { display: none; }
+  .price-row:not(.header) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .price-name { font-size: 16px; }
+  .price-desc { font-size: 13px; }
+}
+@media (max-width: 640px) {
+  .hero h1 { font-size: 30px; }
+  .hero-sub { font-size: 15px; }
+  .btn-lg { padding: 14px 22px; font-size: 14px; width: 100%; justify-content: center; }
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .form-block, .modal-box { padding: 24px; }
+  .float-cta { display: block; }
+}
+@media (max-width: 480px) {
+  .logo-name { font-size: 17px; }
+  .logo-sub { font-size: 10px; }
+  .hero { padding: 120px 0 50px; }
+  .hero h1 { font-size: 26px; }
+  .section-head h2 { font-size: 24px; }
+  .problem { padding: 22px; }
+}
+@media (max-width: 360px) {
+  .hero h1 { font-size: 22px; }
+  .container { padding: 0 14px; }
+}
+@media (hover: none) {
+  .problem:hover, .step:hover, .b2b-card:hover {
+    transform: none; box-shadow: none;
+  }
+}
+</style>
 </head>
 <body>
-    <div class="bg-fixed">
+
+<div class="bg-fixed"></div>
+
+<!-- ===== ШАПКА ===== -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo" aria-label="ПТИЦ НЕТ 35">
+      <span class="logo-name">ПТИЦ <span>НЕТ</span> 35</span>
+      <span class="logo-sub">Орнитологический контроль</span>
+    </a>
+
+    <nav>
+      <ul class="nav" id="mainNav">
+        <li><a href="#price">Услуги и цены</a></li>
+        <li><a href="#problems">Объекты</a></li>
+        <li><a href="#steps">Как мы работаем</a></li>
+        <li><a href="#b2b">Для бизнеса</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <div class="city">
+        <small>Работаем в регионе</small>
+        г. Вологда и Вологодская область
+      </div>
+      <a href="tel:+7XXXXXXXXXX" class="phone-top" aria-label="Позвонить">+7 (XXX) XXX-XX-XX</a>
+      <button class="btn open-modal" aria-label="Заказать расчёт">Заказать расчёт</button>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="container"><!-- ЗАГОЛОВОК -->
-        <section class="portfolio-hero">
-            <h1>
-                <span data-edit="auto_1">Портфолио
-            </span>
-        </h1>
-        <div class="hero-divider">
-            <div class="hero-divider-line">
-            </div>
-            <div class="hero-divider-diamond">
-            </div>
-            <div class="hero-divider-line">
-            </div>
-        </div>
-    </section><!-- ПОРТФОЛИО -->
-    <section class="portfolio-section">
-        <div class="portfolio-grid"><!-- Ряд 1 -->
-            <a href="https://avtomaster.piarbook.ru/" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-avtomaster.jpg" data-img-id="img_1">
-            <img src="images/preview-avtomaster.jpg" alt="АВТОМАСТЕР" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-            <div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.3), rgba(42, 31, 24, 0.8));">
-            </div>
-            <div class="placeholder-label">
-                <strong>
-                <span data-edit="auto_2">preview-avtomaster.jpg
-            </span>
-        </strong>
-        <span>
-        <span data-edit="auto_3">Скриншот сайта
-    </span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_4">№ 01
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_5">Автосервис
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_6">АВТОМАСТЕР
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_7">Тёмная тема, каталог услуг
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_8">Тёмная
-</span>
-</span>
-<span>
-<span data-edit="auto_9">Каталог
-</span>
-</span>
-</div>
-</div>
-</a>
-<a href="https://piarbookru-hub.github.io/specteh/" target="_blank" rel="noopener" class="portfolio-card" data-cms-link="1" data-img="images/preview-salon.jpg" data-img-id="img_2">
-<img src="images/preview-salon.jpg" alt="BEAUTY STUDIO" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(220, 150, 180, 0.3), rgba(42, 31, 40, 0.8));">
-</div>
-<div class="placeholder-label">
-    <strong>
-    <span data-edit="auto_10">preview-salon.jpg
-</span>
-</strong>
-<span>
-<span data-edit="auto_11">Скриншот сайта
-</span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_12">№ 02
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_13">Салон красоты
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_14">BEAUTY STUDIO
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_15">Галерея работ, прайс-лист
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_16">Галерея
-</span>
-</span>
-<span>
-<span data-edit="auto_17">Запись
-</span>
-</span>
-</div>
-</div>
-</a>
-<a href="https://garag.piarbook.ru/" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-garage.jpg" data-img-id="img_3">
-<img src="images/preview-garage.jpg" alt="РЕМОНТ В ГАРАЖЕ" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(120, 140, 90, 0.3), rgba(30, 35, 25, 0.8));">
-</div>
-<div class="placeholder-label">
-    <strong>
-    <span data-edit="auto_18">preview-garage.jpg
-</span>
-</strong>
-<span>
-<span data-edit="auto_19">Скриншот сайта
-</span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_20">№ 03
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_21">Автомастерская
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_22">РЕМОНТ В ГАРАЖЕ
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_23">Оливковая тема, минимализм
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_24">Минимал
-</span>
-</span>
-<span>
-<span data-edit="auto_25">Брутальный
-</span>
-</span>
-</div>
-</div>
-</a><!-- Ряд 2 -->
-<a href="https://law.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-law.jpg" data-img-id="img_4">
-<img src="images/preview-law.jpg" alt="ЮРИСТ" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(60, 80, 120, 0.3), rgba(20, 25, 40, 0.8));">
-</div>
-<div class="placeholder-label">
-    <strong>
-    <span data-edit="auto_26">preview-law.jpg
-</span>
-</strong>
-<span>
-<span data-edit="auto_27">Скриншот сайта
-</span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_28">№ 04
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_29">Юрист
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_30">ЮРИСТ
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_31">Строгий стиль
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_32">Строгий
-</span>
-</span>
-<span>
-<span data-edit="auto_33">Заявки
-</span>
-</span>
-</div>
-</div>
-</a>
-<a href="https://den.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-dental.jpg" data-img-id="img_5">
-<img src="images/preview-dental.jpg" alt="ЗДОРОВАЯ УЛЫБКА" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(100, 180, 200, 0.3), rgba(20, 40, 50, 0.8));">
-</div>
-<div class="placeholder-label">
-    <strong>
-    <span data-edit="auto_34">preview-dental.jpg
-</span>
-</strong>
-<span>
-<span data-edit="auto_35">Скриншот сайта
-</span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_36">№ 05
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_37">Стоматология
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_38">ЗДОРОВАЯ УЛЫБКА
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_39">Услуги, цены, команда врачей
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_40">Медицина
-</span>
-</span>
-<span>
-<span data-edit="auto_41">Врачи
-</span>
-</span>
-</div>
-</div>
-</a>
-<a href="https://med.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-med.jpg" data-img-id="img_6">
-<img src="images/preview-med.jpg" alt="МЕДКЛИНИКА" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(130, 170, 200, 0.3), rgba(25, 35, 50, 0.8));">
-</div>
-<div class="placeholder-label">
-    <strong>
-    <span data-edit="auto_42">preview-med.jpg
-</span>
-</strong>
-<span>
-<span data-edit="auto_43">Скриншот сайта
-</span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_44">№ 06
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_45">Медцентр
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_46">МЕДКЛИНИКА
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_47">Специалисты, спектр услуг
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_48">Клиника
-</span>
-</span>
-<span>
-<span data-edit="auto_49">Специалисты
-</span>
-</span>
-</div>
-</div>
-</a><!-- Ряд 3 -->
-<a href="https://foto.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-foto.jpg" data-img-id="img_7">
-<img src="images/preview-foto.jpg" alt="PHOTO STUDIO" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.4), rgba(42, 31, 24, 0.8));">
-</div>
-<div class="placeholder-label">
-    <strong>
-    <span data-edit="auto_50">preview-foto.jpg
-</span>
-</strong>
-<span>
-<span data-edit="auto_51">Скриншот сайта
-</span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_52">№ 07
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_53">Фото / Видео
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_54">PHOTO STUDIO
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_55">Портфолио, три зала
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_56">Премиум
-</span>
-</span>
-<span>
-<span data-edit="auto_57">Студия
-</span>
-</span>
-</div>
-</div>
-</a>
-<a href="https://demo-komp.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-komp.jpg" data-img-id="img_8">
-<img src="images/preview-komp.jpg" alt="РЕМОНТ КОМПЬЮТЕРОВ" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(180, 80, 50, 0.3), rgba(40, 25, 20, 0.8));">
-</div>
-<div class="placeholder-label">
-    <strong>
-    <span data-edit="auto_58">preview-komp.jpg
-</span>
-</strong>
-<span>
-<span data-edit="auto_59">Скриншот сайта
-</span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_60">№ 08
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_61">Ремонт техники
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_62">РЕМОНТ КОМПЬЮТЕРОВ
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_63">Услуги, ремонт
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_64">Услуги
-</span>
-</span>
-<span>
-<span data-edit="auto_65">Отзывы
-</span>
-</span>
-</div>
-</div>
-</a><!-- Карточка 9: дубликат салона красоты -->
-<a href="https://piarbookru-hub.github.io/specteh/" target="_blank" rel="noopener" class="portfolio-card" data-cms-link="1" data-img="images/preview-salon.jpg" data-img-id="img_9">
-<img src="images/preview-salon.jpg" alt="BEAUTY STUDIO" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
-<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(220, 150, 180, 0.3), rgba(42, 31, 40, 0.8));">
-</div>
-<div class="placeholder-label">
-    <strong>
-    <span data-edit="auto_66">preview-salon.jpg
-</span>
-</strong>
-<span>
-<span data-edit="auto_67">Скриншот сайта
-</span>
-</span>
-</div>
-<div class="card-content">
-    <div class="card-num">
-        <span data-edit="auto_68">№ 09
-    </span>
-</div>
-<div class="card-tag">
-    <span data-edit="auto_69">Салон красоты
-</span>
-</div>
-<h3 class="card-title">
-    <span data-edit="auto_70">Спецтехника
-</span>
-</h3>
-<p class="card-desc">
-    <span data-edit="auto_71">Галерея работ, прайс-лист
-</span>
-</p>
-<div class="card-meta">
-    <span>
-    <span data-edit="auto_72">Галерея
-</span>
-</span>
-<span>
-<span data-edit="auto_73">Запись
-</span>
-</span>
-</div>
-</div>
-</a>
-</div>
-</section><!-- РАЗДЕЛИТЕЛЬ -->
-<div class="divider">
-    <div class="divider-line">
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="placeholder" style="min-height: 100%;">
+      <img src="images/hero.jpg" alt="Защита от птиц Вологда"
+           onload="this.nextElementSibling.classList.add('hidden')"
+           onerror="this.style.display='none'">
+      <div class="placeholder-label">
+        <strong data-copy="images/hero.jpg">hero.jpg</strong>
+        <small>Фото: крыша здания, стая птиц. 1920×1080</small>
+      </div>
     </div>
-    <div class="divider-icon">
-        <svg viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5z">
-    </path>
-    <path d="M2 17l10 5 10-5">
-</path>
-<path d="M2 12l10 5 10-5">
-</path>
-</svg>
-</div>
-<div class="divider-line">
-</div>
-</div><!-- ИНФО-БЛОК -->
-<section class="info-section">
-    <div class="info-grid">
-        <div class="info-card">
-            <div class="info-card-title">
-                <span data-edit="auto_74">Для кого
-            </span>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="badge">🦅 Профессиональный орнитологический контроль</span>
+      <h1>Профессиональная защита объектов от птиц <span>в Вологде и Вологодской области</span></h1>
+      <p class="hero-sub">Гуманное отпугивание, разгон стай и защита зданий от гнездования. Подбираем комплексное решение под ваш объект с фиксацией цены и результата в договоре.</p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-lg open-modal">Рассчитать стоимость защиты</button>
+        <a href="price.pdf" download class="btn btn-lg btn-outline">⬇ Скачать прайс-лист (PDF)</a>
+      </div>
+
+      <div class="triggers">
+        <div class="trigger">
+          <div class="trigger-icon">📋</div>
+          <div class="trigger-text">Работаем по договору с юрлицами, ИП и частными заказчиками</div>
         </div>
-        <div class="tags">
-            <span class="tag">
-            <span data-edit="auto_75">🔧 Автосервисы
-        </span>
-    </span>
-    <span class="tag">
-    <span data-edit="auto_76">🚗 СТО, шиномонтаж
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_77">💅 Салоны красоты
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_78">💄 Маникюр, брови
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_79">🦷 Стоматологии
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_80">🏥 Медцентры
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_81">📷 Фотографы
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_82">🎥 Видеографы
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_83">⚖️ Юристы
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_84">📊 Бухгалтеры
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_85">🔨 Мастера ремонта
-</span>
-</span>
-<span class="tag">
-<span data-edit="auto_86">🏪 Любой малый бизнес
-</span>
-</span>
-</div>
-</div>
-<div class="info-card">
-    <div class="info-card-title">
-        <span data-edit="auto_87">Что входит
-    </span>
-</div>
-<ul class="checklist">
-    <li>
-        <span data-edit="auto_88">Уникальный дизайн (не шаблон)
-    </span>
-</li>
-<li>
-    <span data-edit="auto_89">До 10 разделов на сайте
-</span>
-</li>
-<li>
-    <span data-edit="auto_90">Форма заявок на вашу почту
-</span>
-</li>
-<li>
-    <span data-edit="auto_91">Адаптив: телефон, планшет, ПК
-</span>
-</li>
-<li>
-    <span data-edit="auto_92">Подключение вашего домена
-</span>
-</li>
-<li>
-    <span data-edit="auto_93">Хостинг — бесплатно навсегда
-</span>
-</li>
-<li>
-    <span data-edit="auto_94">Настройка Яндекс.Карт
-</span>
-</li>
-<li>
-    <span data-edit="auto_95">Базовая SEO-оптимизация
-</span>
-</li>
-</ul>
-</div>
-<div class="info-card">
-    <div class="info-card-title">
-        <span data-edit="auto_96">Гарантии
-    </span>
-</div>
-<div class="guarantee-item">
-    <span>
-    <span data-edit="auto_97">Верну деньги, если не понравится — без разговоров
-</span>
-</span>
-</div>
-<div class="guarantee-item">
-    <span>
-    <span data-edit="auto_98">Бесплатная поддержка 1 месяц после сдачи
-</span>
-</span>
-</div>
-<div class="guarantee-item">
-    <span>
-    <span data-edit="auto_99">Оплата только после вашего одобрения
-</span>
-</span>
-</div>
-<div class="guarantee-item">
-    <span>
-    <span data-edit="auto_100">Продление домена — всего 500₽ в год
-</span>
-</span>
-</div>
-<div class="guarantee-item">
-    <span>
-    <span data-edit="auto_101">Срок запуска — 1–2 дня от старта работ
-</span>
-</span>
-</div>
-</div>
-</div>
+        <div class="trigger">
+          <div class="trigger-icon">✅</div>
+          <div class="trigger-text">Безопасные сертифицированные методы: биоакустика, лазер, шипы, струны</div>
+        </div>
+        <div class="trigger">
+          <div class="trigger-icon">📍</div>
+          <div class="trigger-text">Выезд специалиста на осмотр объекта по Вологде</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- ===== ПРОБЛЕМЫ ===== -->
+<section class="problems" id="problems">
+  <div class="container">
+    <div class="section-head">
+      <span class="badge">Для кого наши услуги</span>
+      <h2>Избавим территорию и здания от ущерба, шума и штрафов</h2>
+    </div>
+
+    <div class="problems-grid">
+      <div class="problem">
+        <div class="problem-num">01</div>
+        <h3>Склады, ангары и логистические центры</h3>
+        <p>Защита продукции, упаковки и техники от птичьего помёта, предотвращение проникновения птиц под кровлю и порчи утеплителя.</p>
+      </div>
+      <div class="problem">
+        <div class="problem-num">02</div>
+        <h3>Сельхозпредприятия, элеваторы и фермы</h3>
+        <p>Сохранение урожая и кормов, защита территорий от переносчиков инфекций в соответствии с ветеринарными и санитарными нормами.</p>
+      </div>
+      <div class="problem">
+        <div class="problem-num">03</div>
+        <h3>Торговые центры, магазины и общепит</h3>
+        <p>Соблюдение требований СанПиН и ХАССП, чистота входных групп, фасадов, рекламных вывесок и прилегающей территории.</p>
+      </div>
+      <div class="problem">
+        <div class="problem-num">04</div>
+        <h3>Многоквартирные дома, ЖКХ и памятники</h3>
+        <p>Уборка старых гнёзд, защита карнизов, чердаков и архитектурных элементов от разрушения и постоянного шума.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ПРАЙС ===== -->
+<section class="price" id="price">
+  <div class="container">
+    <div class="section-head">
+      <span class="badge">Услуги и цены</span>
+      <h2>Комплекс мер и стоимость услуг</h2>
+      <p>Для устойчивого освобождения территории от птиц мы применяем не один прибор, а индивидуально подобранную комбинацию нескольких методов.</p>
+    </div>
+
+    <div class="price-table">
+      <div class="price-row header">
+        <div>Услуга / Оборудование</div>
+        <div>Стоимость</div>
+        <div>Описание</div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-name">Уборка старых гнёзд с деревьев</div>
+        <div class="price-cost">от 3 000 ₽ / 4 000 ₽</div>
+        <div class="price-desc">До 20 м — 3 000 ₽, свыше 20 м — 4 000 ₽. Предотвращает повторное присаживание и массовое гнездование.</div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-name">Динамический отпугиватель «Кондор»</div>
+        <div class="price-cost">13 000 ₽</div>
+        <div class="price-desc">Установка воздушного змея на телескопическом флагштоке — реалистичная имитация хищной птицы в полёте.</div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-name">Визуальные отпугиватели «Ястреб»</div>
+        <div class="price-cost">2 500 ₽</div>
+        <div class="price-desc">Монтаж светоотражающих лент и шаров с глазами хищника для локальной защиты участков.</div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-name">Аренда биоакустики «Биозвук Квадро»</div>
+        <div class="price-cost">27 000 ₽ / мес.</div>
+        <div class="price-desc">Профессиональный прибор с дистанционным управлением. Включает настройку звуков и перемещение против привыкания.</div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-name">Разгон больших стай лазером «Стрела»</div>
+        <div class="price-cost">2 500 ₽ / день</div>
+        <div class="price-desc">Утренние и вечерние часы, период начала гнездования. Рекомендуемый курс 8–14 дней.</div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-name">Монтаж противоприсадных шипов</div>
+        <div class="price-cost">1 000 ₽ / пог. м</div>
+        <div class="price-desc">Физическая защита карнизов, парапетов, кондиционеров и вывесок от посадки птиц.</div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-name">Монтаж противоприсадных струн</div>
+        <div class="price-cost">1 300 ₽ / пог. м</div>
+        <div class="price-desc">Малозаметная защита фасадов, коньков крыш и архитектурных элементов.</div>
+      </div>
+    </div>
+
+    <div class="price-note">
+      <strong>Примечание:</strong> итоговая стоимость монтажа шипов и струн может корректироваться в зависимости от сложности объекта при необходимости привлечения автовышки или промышленных альпинистов.
+    </div>
+  </div>
+</section>
+
+<!-- ===== ШАГИ ===== -->
+<section class="steps" id="steps">
+  <div class="container">
+    <div class="section-head">
+      <span class="badge">Как мы работаем</span>
+      <h2>От заявки до чистого объекта — 4 простых шага</h2>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Осмотр и аудит объекта</h3>
+        <p>Оцениваем виды птиц, пути их прилёта, места ночёвок и гнездования.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Подбор комплекса мер</h3>
+        <p>Составляем прозрачную смету с оптимальным сочетанием оборудования (биоакустика + визуальные + механические барьеры).</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Договор с фиксированной ценой</h3>
+        <p>Согласовываем график работ. При долгосрочном сотрудничестве закрепляем фиксированную абонентскую плату.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Установка и сопровождение</h3>
+        <p>Монтируем защиту, проводим курс лазерного разгона или регулярно обслуживаем арендованные приборы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== B2B ===== -->
+<section class="b2b" id="b2b">
+  <div class="container">
+    <div class="section-head">
+      <span class="badge">Для бизнеса</span>
+      <h2>Надёжный подрядчик для предприятий Вологды и области</h2>
+      <p>Работаем с юрлицами, ИП и государственными организациями</p>
+    </div>
+
+    <div class="b2b-grid">
+      <div class="b2b-card">
+        <div class="b2b-icon">📑</div>
+        <h3>Официальная работа по договору</h3>
+        <p>Предоставляем полный пакет закрывающих документов: счёт, договор, акты выполненных работ.</p>
+      </div>
+      <div class="b2b-card">
+        <div class="b2b-icon">🔄</div>
+        <h3>Защита без привыкания птиц</h3>
+        <p>При аренде биоакустических установок регулярно корректируем фонотеку сигналов и меняем точки установки приборов.</p>
+      </div>
+      <div class="b2b-card">
+        <div class="b2b-icon">🌿</div>
+        <h3>Гуманность и экологичность</h3>
+        <p>Используем только разрешённые отпугивающие методы без вреда для людей, домашних животных и окружающей среды.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== КОНТАКТЫ + ФОРМА ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+
+      <div class="form-block">
+        <h2>Заявка на бесплатную консультацию</h2>
+        <p class="subtitle">Оставьте контакты — рассчитаем смету и предложим решение под ваш объект</p>
+
+        <form id="mainForm">
+          <div class="form-group">
+            <label>Ваше имя</label>
+            <input type="text" name="name" placeholder="Как к вам обращаться" required>
+          </div>
+          <div class="form-group">
+            <label>Телефон</label>
+            <input type="tel" name="phone" id="phoneMain" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="form-group">
+            <label>Тип объекта</label>
+            <select name="type" required>
+              <option value="">— выберите —</option>
+              <option>Склад / ангар</option>
+              <option>ТЦ / магазин / общепит</option>
+              <option>Сельхозпредприятие</option>
+              <option>МКД / ЖКХ</option>
+              <option>Частный дом / участок</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <button type="submit" class="btn form-btn">Получить расчёт</button>
+          <p class="form-policy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h3>Контакты</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">🏢</div>
+          <div>
+            <div class="contact-label">Компания</div>
+            <div class="contact-value">«ПТИЦ НЕТ 35»</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Регион работы</div>
+            <div class="contact-value">г. Вологда и Вологодская область</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Телефон (WhatsApp / Telegram)</div>
+            <div class="contact-value"><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:info@pticnet35.ru">info@pticnet35.ru</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Режим работы</div>
+            <div class="contact-value">Пн–Сб с 09:00 до 19:00</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ФУТЕР ===== -->
+<footer class="footer">
+  <div class="container">
+    © 2026 «ПТИЦ НЕТ 35» · Орнитологический контроль · <a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a>
+  </div>
+</footer>
+
+<!-- ===== МОДАЛКА ===== -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+    <h3>Заказать расчёт</h3>
+    <p class="subtitle">Оставьте контакты — перезвоним в течение 15 минут</p>
+
+    <form id="modalForm">
+      <div class="form-group">
+        <label>Ваше имя</label>
+        <input type="text" name="name" required placeholder="Иван">
+      </div>
+      <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" name="phone" id="phoneModal" required placeholder="+7 (___) ___-__-__">
+      </div>
+      <div class="form-group">
+        <label>Тип объекта</label>
+        <select name="type" required>
+          <option value="">— выберите —</option>
+          <option>Склад / ангар</option>
+          <option>ТЦ / магазин / общепит</option>
+          <option>Сельхозпредприятие</option>
+          <option>МКД / ЖКХ</option>
+          <option>Частный дом / участок</option>
+          <option>Другое</option>
+        </select>
+      </div>
+      <button type="submit" class="btn form-btn">Получить расчёт</button>
+      <p class="form-policy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+    </form>
+  </div>
 </div>
+
+<!-- ===== ПЛАВАЮЩАЯ КНОПКА ===== -->
+<button class="float-cta open-modal">💬 Заказать расчёт</button>
+
+<!-- ===== ТОСТ ===== -->
+<div class="toast" id="toast">Скопировано!</div>
+
+<script>
+/* ===== БУРГЕР ===== */
+const burger = document.getElementById('burger');
+const nav = document.getElementById('mainNav');
+burger.addEventListener('click', () => nav.classList.toggle('mobile-open'));
+nav.addEventListener('click', e => {
+  if (e.target.tagName === 'A') nav.classList.remove('mobile-open');
+});
+
+/* ===== МОДАЛКА ===== */
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+document.querySelectorAll('.open-modal').forEach(btn => {
+  btn.addEventListener('click', () => modal.classList.add('active'));
+});
+modalClose.addEventListener('click', () => modal.classList.remove('active'));
+modal.addEventListener('click', e => {
+  if (e.target === modal) modal.classList.remove('active');
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') modal.classList.remove('active');
+});
+
+/* ===== МАСКА ТЕЛЕФОНА ===== */
+function maskPhone(input) {
+  input.addEventListener('input', function() {
+    let x = this.value.replace(/\D/g, '').substring(0, 11);
+    if (x.startsWith('8')) x = '7' + x.substring(1);
+    if (!x.startsWith('7') && x.length > 0) x = '7' + x;
+    let formatted = '+7';
+    if (x.length > 1) formatted += ' (' + x.substring(1, 4);
+    if (x.length >= 5) formatted += ') ' + x.substring(4, 7);
+    if (x.length >= 8) formatted += '-' + x.substring(7, 9);
+    if (x.length >= 10) formatted += '-' + x.substring(10, 12);
+    this.value = formatted;
+  });
+  input.addEventListener('focus', function() {
+    if (!this.value) this.value = '+7 (';
+  });
+}
+maskPhone(document.getElementById('phoneMain'));
+maskPhone(document.getElementById('phoneModal'));
+
+/* ===== ФОРМЫ ===== */
+document.querySelectorAll('#mainForm, #modalForm').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Здесь отправка на сервер / в Telegram / на почту
+    showToast('✓ Заявка отправлена! Перезвоним в течение 15 минут');
+    this.reset();
+    modal.classList.remove('active');
+  });
+});
+
+/* ===== КОПИРОВАНИЕ ИМЁН ФОТО ===== */
+document.addEventListener('click', function(e) {
+  const target = e.target.closest('[data-copy]');
+  if (!target) return;
+  const fullPath = target.getAttribute('data-copy');
+  const fileName = fullPath.split('/').pop();
+  navigator.clipboard.writeText(fileName).then(() => {
+    showToast('📋 Скопировано: ' + fileName);
+  });
+});
+
+/* ===== ТОСТ ===== */
+const toast = document.getElementById('toast');
+let toastTimer;
+function showToast(text) {
+  toast.textContent = text;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
+}
+</script>
+
 </body>
 </html>
