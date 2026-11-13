@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta name="cms-deploy-id" content="dmweyn0a92dzv2h">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Портфолио сайтов для малого бизнеса: автосервисы, салоны красоты, клиники, юристы, фотографы и другие.">
+        <title>Портфолио | piarbook.ru
+    </title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0908;
+            color: #f5efe6;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .bg-fixed {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: linear-gradient(135deg, #0a0908 0%, #1a1614 50%, #2a1f18 100%);
+        }
+        .bg-fixed::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('images/studio-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.12;
+            filter: blur(2px) saturate(0.7);
+        }
+        .bg-fixed::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(201, 169, 97, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(180, 80, 50, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(10, 9, 8, 0.3) 0%, rgba(10, 9, 8, 0.85) 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== ЗАГОЛОВОК ПОРТФОЛИО ===== */
+        .portfolio-hero {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 1rem 0 0.5rem;
+        }
+        .portfolio-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.3rem, 5vw, 2.8rem);
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #c9a961;
+            margin-bottom: 0.6rem;
+            position: relative;
+            display: inline-block;
+        }
+        .portfolio-hero h1::before,
+        .portfolio-hero h1::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: clamp(20px, 5vw, 50px);
+            height: 1px;
+        }
+        .portfolio-hero h1::before {
+            right: 100%;
+            margin-right: 1rem;
+            background: linear-gradient(90deg, transparent, #c9a961);
+        }
+        .portfolio-hero h1::after {
+            left: 100%;
+            margin-left: 1rem;
+            background: linear-gradient(90deg, #c9a961, transparent);
+        }
+        .hero-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+        }
+        .hero-divider-line {
+            width: clamp(40px, 10vw, 100px);
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.5), transparent);
+        }
+        .hero-divider-diamond {
+            width: 6px;
+            height: 6px;
+            background: #c9a961;
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px rgba(201, 169, 97, 0.4);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+            padding: 0 1rem;
+        }
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.4) 20%, rgba(201, 169, 97, 0.4) 80%, transparent);
+        }
+        .divider-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(201, 169, 97, 0.1);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c9a961;
+            flex-shrink: 0;
+        }
+        .divider-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .portfolio-section {
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== СЕТКА 3x3 ГОРИЗОНТАЛЬНАЯ ===== */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 66.67%;
+            margin: 0 auto;
+        }
+
+        .portfolio-card {
+            position: relative;
+            aspect-ratio: 16/10;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.4s, border-color 0.4s;
+            background: #1a1614;
+            display: flex;
+            align-items: flex-end;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid rgba(201, 169, 97, 0.15);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(201, 169, 97, 0.4);
+        }
+        .portfolio-card:focus-visible,
+        .tag:focus-visible {
+            outline: 2px solid #c9a961;
+            outline-offset: 3px;
+        }
+
+        .portfolio-card-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center top;
+            transition: transform 0.6s, opacity 0.6s;
+            opacity: 0.75;
+            pointer-events: none;
+        }
+
+        /* ===== ФОТО: вписывается целиком, бока не обрезаются ===== */
+        .portfolio-card img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center top;
+            z-index: 1;
+            transition: transform 0.6s;
+            opacity: 1;
+            background: #1a1614;
+        }
+        .portfolio-card:hover img,
+        .portfolio-card:hover .portfolio-card-bg {
+            transform: scale(1.03);
+        }
+
+        /* ===== ЗАТЕМНЕНИЕ ===== */
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                180deg, 
+                transparent 0%, 
+                transparent 15%,
+                rgba(10, 9, 8, 0.35) 32%,
+                rgba(10, 9, 8, 0.80) 48%,
+                rgba(10, 9, 8, 0.97) 62%,
+                #0a0908 80%
+            );
+            z-index: 2;
+            pointer-events: none;
+        }
+        .portfolio-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at center top, transparent 25%, rgba(10, 9, 8, 0.28) 100%),
+                linear-gradient(180deg, rgba(10, 9, 8, 0.12) 0%, transparent 20%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* ===== ТЕКСТ КАРТОЧКИ ===== */
+        .card-content {
+            position: relative;
+            z-index: 3;
+            padding: 1rem 1.2rem;
+            width: 100%;
+            pointer-events: auto;
+        }
+
+        .card-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.72rem;
+            color: #c9a961;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.4rem;
+            font-style: italic;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .card-tag {
+            font-size: 0.62rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #d4b876;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #ffffff;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        .card-desc {
+            font-size: 0.72rem;
+            color: #d4cec2;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 0.6rem;
+            font-size: 0.62rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #b8b0a4;
+            padding-top: 0.5rem;
+            border-top: 1px solid rgba(201, 169, 97, 0.35);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .placeholder-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: 4px;
+            max-width: 85%;
+            pointer-events: none;
+        }
+        .placeholder-label strong {
+            display: block;
+            font-family: 'Courier New', monospace;
+            font-size: 0.72rem;
+            color: #c9a961;
+            margin-bottom: 0.4rem;
+            word-break: break-all;
+        }
+        .placeholder-label span {
+            display: block;
+            font-size: 0.68rem;
+            color: #b8b0a4;
+            line-height: 1.4;
+        }
+
+        .info-section {
+            margin-top: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: rgba(26, 22, 20, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1.8rem;
+            border-radius: 4px;
+            border: 1px solid rgba(201, 169, 97, 0.15);
+            transition: all 0.3s;
+        }
+        .info-card:hover {
+            border-color: rgba(201, 169, 97, 0.35);
+            transform: translateY(-4px);
+        }
+
+        .info-card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #c9a961;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+            letter-spacing: 0.03em;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+        .checklist li {
+            padding: 0.45rem 0;
+            color: #f5efe6;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            line-height: 1.5;
+        }
+        .checklist li::before {
+            content: '—';
+            color: #c9a961;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+        .tag {
+            background: rgba(201, 169, 97, 0.08);
+            border: 1px solid rgba(201, 169, 97, 0.25);
+            color: #f5efe6;
+            padding: 0.4rem 0.85rem;
+            border-radius: 2px;
+            font-size: 0.82rem;
+            font-weight: 400;
+            transition: all 0.3s;
+        }
+        .tag:hover {
+            background: rgba(201, 169, 97, 0.2);
+            border-color: #c9a961;
+            color: #c9a961;
+            transform: translateY(-2px);
+        }
+
+        .guarantee-item {
+            display: flex;
+            gap: 0.7rem;
+            padding: 0.55rem 0;
+            color: #f5efe6;
+            font-size: 0.9rem;
+            align-items: flex-start;
+            line-height: 1.5;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.08);
+        }
+        .guarantee-item:last-child {
+            border-bottom: none;
+        }
+        .guarantee-item::before {
+            content: '✦';
+            color: #c9a961;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 1.5rem 1.5rem 2.5rem;
+            }
+            .portfolio-hero {
+                margin-bottom: 2rem;
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.9rem;
+                max-width: 100%;
+            }
+            /* девятая карточка не остаётся одна сбоку */
+            .portfolio-card:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                justify-self: center;
+                width: calc(50% - 0.45rem);
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.2rem 1rem 2rem;
+            }
+            .portfolio-hero {
+                margin-bottom: 1.5rem;
+                padding: 0.5rem 0;
+            }
+            .portfolio-hero h1 {
+                letter-spacing: 0.15em;
+            }
+            .portfolio-hero h1::before,
+            .portfolio-hero h1::after {
+                display: none;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+                max-width: 100%;
+            }
+            .portfolio-card:last-child:nth-child(odd) {
+                width: 100%;
+            }
+            .portfolio-card {
+                aspect-ratio: 16/9;
+            }
+            .card-content {
+                padding: 1rem;
+            }
+            .card-title {
+                font-size: 1.2rem;
+            }
+            .info-card {
+                padding: 1.4rem;
+            }
+            .info-card-title {
+                font-size: 1.25rem;
+            }
+            .divider {
+                margin: 2rem 0;
+            }
+            .divider-icon {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .container {
+                padding: 1rem 0.8rem 1.8rem;
+            }
+            .info-card {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="bg-fixed">
+    </div>
+    <div class="container"><!-- ЗАГОЛОВОК -->
+        <section class="portfolio-hero">
+            <h1>
+                <span data-edit="auto_1">Портфолио
+            </span>
+        </h1>
+        <div class="hero-divider">
+            <div class="hero-divider-line">
+            </div>
+            <div class="hero-divider-diamond">
+            </div>
+            <div class="hero-divider-line">
+            </div>
+        </div>
+    </section><!-- ПОРТФОЛИО -->
+    <section class="portfolio-section">
+        <div class="portfolio-grid"><!-- Ряд 1 -->
+            <a href="https://avtomaster.piarbook.ru/" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-avtomaster.jpg" data-img-id="img_1">
+            <img src="images/preview-avtomaster.jpg" alt="АВТОМАСТЕР" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+            <div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.3), rgba(42, 31, 24, 0.8));">
+            </div>
+            <div class="placeholder-label">
+                <strong>
+                <span data-edit="auto_2">preview-avtomaster.jpg
+            </span>
+        </strong>
+        <span>
+        <span data-edit="auto_3">Скриншот сайта
+    </span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_4">№ 01
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_5">Автосервис
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_6">АВТОМАСТЕР
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_7">Тёмная тема, каталог услуг
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_8">Тёмная
+</span>
+</span>
+<span>
+<span data-edit="auto_9">Каталог
+</span>
+</span>
+</div>
+</div>
+</a>
+<a href="https://piarbookru-hub.github.io/specteh/" target="_blank" rel="noopener" class="portfolio-card" data-cms-link="1" data-img="images/preview-salon.jpg" data-img-id="img_2">
+<img src="images/preview-salon.jpg" alt="BEAUTY STUDIO" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(220, 150, 180, 0.3), rgba(42, 31, 40, 0.8));">
+</div>
+<div class="placeholder-label">
+    <strong>
+    <span data-edit="auto_10">preview-salon.jpg
+</span>
+</strong>
+<span>
+<span data-edit="auto_11">Скриншот сайта
+</span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_12">№ 02
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_13">Салон красоты
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_14">BEAUTY STUDIO
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_15">Галерея работ, прайс-лист
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_16">Галерея
+</span>
+</span>
+<span>
+<span data-edit="auto_17">Запись
+</span>
+</span>
+</div>
+</div>
+</a>
+<a href="https://garag.piarbook.ru/" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-garage.jpg" data-img-id="img_3">
+<img src="images/preview-garage.jpg" alt="РЕМОНТ В ГАРАЖЕ" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(120, 140, 90, 0.3), rgba(30, 35, 25, 0.8));">
+</div>
+<div class="placeholder-label">
+    <strong>
+    <span data-edit="auto_18">preview-garage.jpg
+</span>
+</strong>
+<span>
+<span data-edit="auto_19">Скриншот сайта
+</span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_20">№ 03
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_21">Автомастерская
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_22">РЕМОНТ В ГАРАЖЕ
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_23">Оливковая тема, минимализм
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_24">Минимал
+</span>
+</span>
+<span>
+<span data-edit="auto_25">Брутальный
+</span>
+</span>
+</div>
+</div>
+</a><!-- Ряд 2 -->
+<a href="https://law.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-law.jpg" data-img-id="img_4">
+<img src="images/preview-law.jpg" alt="ЮРИСТ" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(60, 80, 120, 0.3), rgba(20, 25, 40, 0.8));">
+</div>
+<div class="placeholder-label">
+    <strong>
+    <span data-edit="auto_26">preview-law.jpg
+</span>
+</strong>
+<span>
+<span data-edit="auto_27">Скриншот сайта
+</span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_28">№ 04
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_29">Юрист
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_30">ЮРИСТ
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_31">Строгий стиль
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_32">Строгий
+</span>
+</span>
+<span>
+<span data-edit="auto_33">Заявки
+</span>
+</span>
+</div>
+</div>
+</a>
+<a href="https://den.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-dental.jpg" data-img-id="img_5">
+<img src="images/preview-dental.jpg" alt="ЗДОРОВАЯ УЛЫБКА" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(100, 180, 200, 0.3), rgba(20, 40, 50, 0.8));">
+</div>
+<div class="placeholder-label">
+    <strong>
+    <span data-edit="auto_34">preview-dental.jpg
+</span>
+</strong>
+<span>
+<span data-edit="auto_35">Скриншот сайта
+</span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_36">№ 05
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_37">Стоматология
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_38">ЗДОРОВАЯ УЛЫБКА
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_39">Услуги, цены, команда врачей
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_40">Медицина
+</span>
+</span>
+<span>
+<span data-edit="auto_41">Врачи
+</span>
+</span>
+</div>
+</div>
+</a>
+<a href="https://med.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-med.jpg" data-img-id="img_6">
+<img src="images/preview-med.jpg" alt="МЕДКЛИНИКА" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(130, 170, 200, 0.3), rgba(25, 35, 50, 0.8));">
+</div>
+<div class="placeholder-label">
+    <strong>
+    <span data-edit="auto_42">preview-med.jpg
+</span>
+</strong>
+<span>
+<span data-edit="auto_43">Скриншот сайта
+</span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_44">№ 06
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_45">Медцентр
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_46">МЕДКЛИНИКА
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_47">Специалисты, спектр услуг
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_48">Клиника
+</span>
+</span>
+<span>
+<span data-edit="auto_49">Специалисты
+</span>
+</span>
+</div>
+</div>
+</a><!-- Ряд 3 -->
+<a href="https://foto.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-foto.jpg" data-img-id="img_7">
+<img src="images/preview-foto.jpg" alt="PHOTO STUDIO" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(201, 169, 97, 0.4), rgba(42, 31, 24, 0.8));">
+</div>
+<div class="placeholder-label">
+    <strong>
+    <span data-edit="auto_50">preview-foto.jpg
+</span>
+</strong>
+<span>
+<span data-edit="auto_51">Скриншот сайта
+</span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_52">№ 07
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_53">Фото / Видео
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_54">PHOTO STUDIO
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_55">Портфолио, три зала
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_56">Премиум
+</span>
+</span>
+<span>
+<span data-edit="auto_57">Студия
+</span>
+</span>
+</div>
+</div>
+</a>
+<a href="https://demo-komp.piarbook.ru" target="_blank" rel="noopener" class="portfolio-card" data-img="images/preview-komp.jpg" data-img-id="img_8">
+<img src="images/preview-komp.jpg" alt="РЕМОНТ КОМПЬЮТЕРОВ" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(180, 80, 50, 0.3), rgba(40, 25, 20, 0.8));">
+</div>
+<div class="placeholder-label">
+    <strong>
+    <span data-edit="auto_58">preview-komp.jpg
+</span>
+</strong>
+<span>
+<span data-edit="auto_59">Скриншот сайта
+</span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_60">№ 08
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_61">Ремонт техники
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_62">РЕМОНТ КОМПЬЮТЕРОВ
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_63">Услуги, ремонт
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_64">Услуги
+</span>
+</span>
+<span>
+<span data-edit="auto_65">Отзывы
+</span>
+</span>
+</div>
+</div>
+</a><!-- Карточка 9: дубликат салона красоты -->
+<a href="https://piarbookru-hub.github.io/specteh/" target="_blank" rel="noopener" class="portfolio-card" data-cms-link="1" data-img="images/preview-salon.jpg" data-img-id="img_9">
+<img src="images/preview-salon.jpg" alt="BEAUTY STUDIO" loading="lazy" onload="this.parentElement.querySelector('.placeholder-label').style.display='none'" onerror="this.style.display='none'">
+<div class="portfolio-card-bg" style="background: linear-gradient(135deg, rgba(220, 150, 180, 0.3), rgba(42, 31, 40, 0.8));">
+</div>
+<div class="placeholder-label">
+    <strong>
+    <span data-edit="auto_66">preview-salon.jpg
+</span>
+</strong>
+<span>
+<span data-edit="auto_67">Скриншот сайта
+</span>
+</span>
+</div>
+<div class="card-content">
+    <div class="card-num">
+        <span data-edit="auto_68">№ 09
+    </span>
+</div>
+<div class="card-tag">
+    <span data-edit="auto_69">Салон красоты
+</span>
+</div>
+<h3 class="card-title">
+    <span data-edit="auto_70">Спецтехника
+</span>
+</h3>
+<p class="card-desc">
+    <span data-edit="auto_71">Галерея работ, прайс-лист
+</span>
+</p>
+<div class="card-meta">
+    <span>
+    <span data-edit="auto_72">Галерея
+</span>
+</span>
+<span>
+<span data-edit="auto_73">Запись
+</span>
+</span>
+</div>
+</div>
+</a>
+</div>
+</section><!-- РАЗДЕЛИТЕЛЬ -->
+<div class="divider">
+    <div class="divider-line">
+    </div>
+    <div class="divider-icon">
+        <svg viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5z">
+    </path>
+    <path d="M2 17l10 5 10-5">
+</path>
+<path d="M2 12l10 5 10-5">
+</path>
+</svg>
+</div>
+<div class="divider-line">
+</div>
+</div><!-- ИНФО-БЛОК -->
+<section class="info-section">
+    <div class="info-grid">
+        <div class="info-card">
+            <div class="info-card-title">
+                <span data-edit="auto_74">Для кого
+            </span>
+        </div>
+        <div class="tags">
+            <span class="tag">
+            <span data-edit="auto_75">🔧 Автосервисы
+        </span>
+    </span>
+    <span class="tag">
+    <span data-edit="auto_76">🚗 СТО, шиномонтаж
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_77">💅 Салоны красоты
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_78">💄 Маникюр, брови
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_79">🦷 Стоматологии
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_80">🏥 Медцентры
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_81">📷 Фотографы
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_82">🎥 Видеографы
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_83">⚖️ Юристы
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_84">📊 Бухгалтеры
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_85">🔨 Мастера ремонта
+</span>
+</span>
+<span class="tag">
+<span data-edit="auto_86">🏪 Любой малый бизнес
+</span>
+</span>
+</div>
+</div>
+<div class="info-card">
+    <div class="info-card-title">
+        <span data-edit="auto_87">Что входит
+    </span>
+</div>
+<ul class="checklist">
+    <li>
+        <span data-edit="auto_88">Уникальный дизайн (не шаблон)
+    </span>
+</li>
+<li>
+    <span data-edit="auto_89">До 10 разделов на сайте
+</span>
+</li>
+<li>
+    <span data-edit="auto_90">Форма заявок на вашу почту
+</span>
+</li>
+<li>
+    <span data-edit="auto_91">Адаптив: телефон, планшет, ПК
+</span>
+</li>
+<li>
+    <span data-edit="auto_92">Подключение вашего домена
+</span>
+</li>
+<li>
+    <span data-edit="auto_93">Хостинг — бесплатно навсегда
+</span>
+</li>
+<li>
+    <span data-edit="auto_94">Настройка Яндекс.Карт
+</span>
+</li>
+<li>
+    <span data-edit="auto_95">Базовая SEO-оптимизация
+</span>
+</li>
+</ul>
+</div>
+<div class="info-card">
+    <div class="info-card-title">
+        <span data-edit="auto_96">Гарантии
+    </span>
+</div>
+<div class="guarantee-item">
+    <span>
+    <span data-edit="auto_97">Верну деньги, если не понравится — без разговоров
+</span>
+</span>
+</div>
+<div class="guarantee-item">
+    <span>
+    <span data-edit="auto_98">Бесплатная поддержка 1 месяц после сдачи
+</span>
+</span>
+</div>
+<div class="guarantee-item">
+    <span>
+    <span data-edit="auto_99">Оплата только после вашего одобрения
+</span>
+</span>
+</div>
+<div class="guarantee-item">
+    <span>
+    <span data-edit="auto_100">Продление домена — всего 500₽ в год
+</span>
+</span>
+</div>
+<div class="guarantee-item">
+    <span>
+    <span data-edit="auto_101">Срок запуска — 1–2 дня от старта работ
+</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</body>
+</html>
